@@ -1,0 +1,15 @@
+app:
+  log_level: "DEBUG"
+
+database:
+  url: "postgresql://dev:dev@localhost/mevbot"
+  pool_size: 3
+
+web3:
+  provider_url: "http://localhost:8545"
+  chain_id: 1337
+  max_gas_price: 50
+
+monitoring:
+  metrics_enabled: false
+

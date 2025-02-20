@@ -1,0 +1,21 @@
+app:
+  name: "MEV Bot"
+  version: "1.0.0"
+  log_level: "INFO"
+
+database:
+  pool_size: 5
+  max_overflow: 10
+  pool_timeout: 30
+  pool_recycle: 3600
+
+web3:
+  chain_id: 1
+  max_gas_price: 100
+  backup_providers: []
+
+monitoring:
+  enabled: true
+  prometheus_port: 9090
+  metrics_enabled: true
+

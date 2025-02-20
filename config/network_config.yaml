@@ -1,0 +1,30 @@
+networks:
+  mainnet:
+    chain_id: 1
+    name: "Ethereum Mainnet"
+    rpc_url: "https://mainnet.infura.io/v3/${INFURA_API_KEY}"
+    ws_url: "wss://mainnet.infura.io/ws/v3/${INFURA_API_KEY}"
+    explorer_url: "https://etherscan.io"
+    block_time: 12
+    confirmation_blocks: 2
+    gas_price_strategy: "fast"
+    native_token: "ETH"
+    wrapped_native: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    dex_routers:
+      uniswap_v2: "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D"
+      sushiswap: "0xd9e1cE17f2641f24aE83637ab66a2cca9C378B9F"
+
+gas_price_strategies:
+  slow:
+    multiplier: 1.0
+    max_wait_time: 180
+  normal:
+    multiplier: 1.1
+    max_wait_time: 120
+  fast:
+    multiplier: 1.2
+    max_wait_time: 60
+  rapid:
+    multiplier: 1.5
+    max_wait_time: 30
+

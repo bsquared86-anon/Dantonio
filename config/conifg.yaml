@@ -1,0 +1,41 @@
+app:
+  name: "MEV Bot"
+  version: "1.0.0"
+  environment: "development"
+  debug: false
+
+web3:
+  provider_url: "https://mainnet.infura.io/v3/${INFURA_API_KEY}"
+  chain_id: 1
+  max_gas_price: 500
+  private_key: "${PRIVATE_KEY}"
+  public_key: "${PUBLIC_KEY}"
+
+redis:
+  url: "redis://localhost:6379"
+  password: "${REDIS_PASSWORD}"
+  db: 0
+
+database:
+  url: "postgresql://${DB_USER}:${DB_PASSWORD}@localhost:5432/mevbot"
+  pool_size: 5
+  max_overflow: 10
+
+security:
+  jwt_secret: "${JWT_SECRET}"
+  api_key: "${API_KEY}"
+  max_requests_per_minute: 60
+  max_position_size: 10.0
+  slippage_tolerance: 0.005
+  emergency_shutdown_balance: 0.1
+
+strategies:
+  flash_loan_arbitrage:
+    enabled: true
+    min_profit: 0.1
+    max_gas: 500000
+    tokens:
+      - "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"  # WETH
+      - "0xdAC17F958D2ee523a2206206994597C13D831ec7"  # USDT
+      - "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"  # USDC
+

@@ -1,0 +1,15 @@
+app:
+  log_level: "WARNING"
+
+database:
+  url: "${DATABASE_URL}"
+  pool_size: 10
+
+web3:
+  provider_url: "${WEB3_PROVIDER_URL}"
+  private_key: "${PRIVATE_KEY}"
+  max_gas_price: 150
+
+monitoring:
+  alert_webhook: "${ALERT_WEBHOOK}"
+

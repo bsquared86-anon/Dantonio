@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "dantonio"
+version = "0.1.0"
+description = "F-DAntonio Trading Strategy API"
+authors = ["Your Name <your.email@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.68.0"
+uvicorn = "^0.15.0"
+web3 = "^5.24.0"
+pydantic = "^1.8.2"
+sqlalchemy = "^1.4.23"
+alembic = "^1.7.1"
+python-dotenv = "^0.19.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+black = "^21.7b0"
+mypy = "^0.910"
+flake8 = "^3.9.2"
+isort = "^5.9.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
